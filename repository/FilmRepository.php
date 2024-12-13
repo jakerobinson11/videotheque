@@ -5,8 +5,9 @@ namespace Film;
 use Connection\Connect;
 
 include_once("./repository/pdo.php");
-
-class FilmRepository extends Connect{
+// abstract permet empecher l'instanciation d'une class
+// mais garde possible son heritage (extends)
+abstract class FilmRepository extends Connect{
     private $pdo;
     public function __construct()
     {

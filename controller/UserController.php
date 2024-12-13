@@ -1,4 +1,6 @@
 <?php
+
+namespace User;
 include("./repository/UserRepository.php");
 class UserController extends UserRepository {
     public function registration($data){

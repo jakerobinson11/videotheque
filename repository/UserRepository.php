@@ -1,5 +1,7 @@
 <?php
 
+namespace User;
+
 use Connection\Connect;
 include_once("./repository/pdo.php");
 
