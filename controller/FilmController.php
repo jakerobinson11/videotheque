@@ -1,4 +1,5 @@
 <?php
+namespace Film;
 include("./repository/FilmRepository.php");
 
 
@@ -35,4 +36,10 @@ class FilmController extends FilmRepository {
         
     }
 
+}
+
+class Info {
+    public function displayInfoFilm(){
+        return "Info sur les films ";
+    }
 }

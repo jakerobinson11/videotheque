@@ -1,4 +1,6 @@
 <?php
+
+use Connection\Connect;
 include_once("./repository/pdo.php");
 
 class UserRepository extends Connect{

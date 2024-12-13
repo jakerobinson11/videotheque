@@ -21,6 +21,10 @@ class UserController extends UserRepository {
         }
         
     }
+}
 
-
+class Info {
+    public function displayInfoUser(){
+        return "Info sur les utilisateurs ";
+    }
 }

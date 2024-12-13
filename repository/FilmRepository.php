@@ -1,4 +1,9 @@
 <?php
+namespace Film;
+// pour importer une class depuis un autre namespace
+// je dois utiliser le mot cle use suivis du Namespace\Class
+use Connection\Connect;
+
 include_once("./repository/pdo.php");
 
 class FilmRepository extends Connect{
