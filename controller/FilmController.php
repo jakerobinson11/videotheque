@@ -33,10 +33,10 @@ class FilmController extends FilmRepository {
         // je filtre, je trie, je controlle les données fournies par le repository
             /* var_dump($listFilms); */
         foreach ($listFilms as $key => $value){
-            if(!file_exists("../assets/img/posters/".$value['id_movie'].".jpg")){
-                $listFilms[$key]['urlPoster'] = "../assets/img/default-movie.jpg";
+            if(!file_exists("./assets/img/posters/" . $value['id_movie'] . ".jpg")){
+                $listFilms[$key]['urlPoster'] = "./assets/img/default-movie.jpg";
             } else {
-                $listFilms[$key]['urlPoster'] = "../assets/img/posters/".$value['id_movie'].".jpg";
+                $listFilms[$key]['urlPoster'] = "./assets/img/posters/".$value['id_movie'].".jpg";
             }
         }
         return $listFilms;
