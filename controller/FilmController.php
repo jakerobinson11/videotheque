@@ -42,9 +42,20 @@ class FilmController extends FilmRepository {
         return $listFilms;
         
     }
-
+    public function displayOneFilm($get){
+        // possibilité de controle des données
+        if(empty($get)){
+            return ["error"=>"Desolé blah blahblahblah"];
+        } else {
+            // controle id_movie qui n'existe pas dans ma table
+            if($this->getFilmById($get['id_movie'])){
+                return $this->getFilmById($get['id_movie']);
+            } else {
+                return ["error"=>"Desolé blah blahblahblah"];
+            }
+        }
+    }
 }
-
 class Info {
     public function displayInfoFilm(){
         return "Info sur les films ";
