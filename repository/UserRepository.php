@@ -8,9 +8,15 @@ class UserRepository extends Connect{
         $this->pdo = $this->connect();
     }
     protected function insert($data){
-        $rq = "INSERT INTO user(email, password, nom) VALUES ('".$data['email']."','".$data['password']."','".$data['nom']."')";
+        $rq = "INSERT INTO user(email, password, nom) VALUES (:email,:password,:nom)";
         $statement = $this->pdo->prepare($rq);
-        $statement->execute();
+        $statement->execute(
+            [
+                ":email"=>$data['email'],
+                ":nom"=>$data['nom'],
+                ":password"=>$data['password']
+                ]
+        );
     }
     protected function getAllUsers(){
         $rq = "SELECT * FROM user";

@@ -1,6 +1,7 @@
 <?php
 include("./repository/FilmRepository.php");
 
+
 class FilmController extends FilmRepository {
     private $id;
     private $title;
@@ -21,14 +22,17 @@ class FilmController extends FilmRepository {
     public function getYear(){
         return $this->year;
     }
+    
     public function setYear($year){
         $this->year = $year;
     }
-
+    
     public function displayIndex(){
         $listFilms = $this->getRandomFilms();
-        // je filtre, je trie, je controlle les donnes fourries par le repository
-        /* var_dump($listFilms); */
+        // je filtre, je trie, je controlle les données fournies par le repository
+            /* var_dump($listFilms); */
         return $listFilms;
+        
     }
+
 }

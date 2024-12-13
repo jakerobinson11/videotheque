@@ -1,16 +1,16 @@
 <?php
 include("./repository/UserRepository.php");
-
-class UserController extends UserRepository{
+class UserController extends UserRepository {
     public function registration($data){
         $error = [];
-        $nom = $data["nom"];
-        $email = $data["email"];
-        $password = $data["password"];
+        $nom = $data['nom'];
+        $email = $data['email'];
+        $password = $data['password'];
         // verification des données sinon push error
-        if (sizeof($error) === 0) {
-            /* var_dump($error); */
-           /*  die; */
+        // ...
+        if(sizeof($error) === 0){
+            /* var_dump($error);
+            die; */
             // appelle UserRepository pour enregistrer mes données
             $verifData['nom'] = $nom;
             $verifData['email'] = $email;
@@ -19,6 +19,8 @@ class UserController extends UserRepository{
         } else {
             return $error;
         }
+        
     }
-}
 
+
+}

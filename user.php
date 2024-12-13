@@ -3,9 +3,9 @@ include("./templates/header.html");
 include("./controller/UserController.php");
 // ... 
 // besoin d'un signal qui à la validation de mon formulaire appelle mon controller
-if(isset($_POST["submit"]) && !empty($_POST["submit"])){
-    $user = new UserController;
-    $error = $user->registration($_POST);
+if( isset($_POST["submit"]) && !empty($_POST["submit"]) ){
+    $user = new UserController; 
+    $error = $user->registration($_POST);  
 }
 ?>
 <form action="./user.php" method="post">
