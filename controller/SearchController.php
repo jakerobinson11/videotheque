@@ -5,7 +5,7 @@ abstract class SearchController{
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]);
-        $rq = "SELECT * FROM movies_full WHERE title LIKE '%$input%'";
+        $rq = "SELECT * FROM movies_full WHERE title LIKE '%$input%' LIMIT 0,10";
         $statement = $pdo->prepare($rq);
         $statement->execute();
         $result = $statement->fetchAll();

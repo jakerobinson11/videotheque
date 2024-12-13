@@ -14,3 +14,4 @@ var_dump($film);
 
 
 include("./templates/footer.html");
+
