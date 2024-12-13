@@ -7,14 +7,14 @@ include("./templates/header.html");
 <div id="random-films" class="d-flex flex-wrap">
     <?php foreach ($film->displayIndex() as $value) : ?>
         <div class="card mb-3 w-25">
-            <h3 class="card-header"><?php echo $value["title"]; ?></h3>
+            <h3 class="card-header"><?= $value["title"]; ?></h3>
             <div class="card-body">
-                <h5 class="card-title"><?php echo $value["directors"]; ?></h5>
-                <h6 class="card-subtitle text-muted"><?php echo $value["year"]; ?></h6>
+                <h5 class="card-title"><?= $value["directors"]; ?></h5>
+                <h6 class="card-subtitle text-muted"><?= $value["year"]; ?></h6>
             </div>
-            <img class="img-fluid" src="./assets/img/posters/<?php echo $value["id_movie"]; ?>.jpg" alt="">
+            <img class="img-fluid" src="./assets/img/posters/<?= $value["id_movie"]; ?>.jpg" alt="">
             <div class="card-body">
-                <p class="card-text"><?php echo $value["plot"]; ?></p>
+                <p class="card-text"><?= $value["plot"]; ?></p>
             </div>
             <div class="card-body">
                 <a href="#" class="card-link">Plus d'Info</a>
